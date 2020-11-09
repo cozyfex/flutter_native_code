@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_native_code">
+    package="com.cozyfex.flutter_native_code">
    <application
-        android:label="flutter_native_code"
+        android:label="Flutter Native Code"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

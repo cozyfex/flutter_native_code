@@ -1,4 +1,4 @@
-package com.example.flutter_native_code
+package com.cozyfex.flutter_native_code
 
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity
