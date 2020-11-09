@@ -31,16 +31,18 @@ class _MyHomePageState extends State<MyHomePage> {
       final batteryLevel = await platform.invokeMethod('getBatteryLevel');
       setState(() {
         _batteryLevel = batteryLevel;
+        print(batteryLevel);
       });
     } on PlatformException catch (error) {
       _batteryLevel = null;
+      print(error);
     }
   }
 
   @override
   void initState() {
-    _getBatteryLevel();
     super.initState();
+    _getBatteryLevel();
   }
 
   @override
@@ -50,7 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Native Code'),
       ),
       body: Center(
-        child: Text('Battery Level: $_batteryLevel'),
+        child: Column(
+          children: [
+            Text('$_batteryLevel'),
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: _getBatteryLevel,
+            ),
+          ],
+        ),
       ),
     );
   }
